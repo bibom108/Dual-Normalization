@@ -1,0 +1,2038 @@
+2024-11-06 00:08:58,667 - root - INFO - test-time adaptation: TENT
+2024-11-06 00:08:58,677 - root - INFO - model for adaptation: Unet2D(
+  (convd1): ConvD(
+    (conv1): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd2): ConvD(
+    (conv1): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd3): ConvD(
+    (conv1): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd4): ConvD(
+    (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd5): ConvD(
+    (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convu4): ConvU(
+    (pool): MyUpsample2()
+    (conv2): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu3): ConvU(
+    (conv1): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu2): ConvU(
+    (conv1): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu1): ConvU(
+    (conv1): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(32, 16, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (seg1): Conv2d(32, 2, kernel_size=(1, 1), stride=(1, 1))
+)
+2024-11-06 00:08:58,678 - root - INFO - params for adaptation: ['convd1.bn1.bns.0.weight', 'convd1.bn1.bns.0.bias', 'convd1.bn1.bns.1.weight', 'convd1.bn1.bns.1.bias', 'convd1.bn2.bns.0.weight', 'convd1.bn2.bns.0.bias', 'convd1.bn2.bns.1.weight', 'convd1.bn2.bns.1.bias', 'convd1.bn3.bns.0.weight', 'convd1.bn3.bns.0.bias', 'convd1.bn3.bns.1.weight', 'convd1.bn3.bns.1.bias', 'convd2.bn1.bns.0.weight', 'convd2.bn1.bns.0.bias', 'convd2.bn1.bns.1.weight', 'convd2.bn1.bns.1.bias', 'convd2.bn2.bns.0.weight', 'convd2.bn2.bns.0.bias', 'convd2.bn2.bns.1.weight', 'convd2.bn2.bns.1.bias', 'convd2.bn3.bns.0.weight', 'convd2.bn3.bns.0.bias', 'convd2.bn3.bns.1.weight', 'convd2.bn3.bns.1.bias', 'convd3.bn1.bns.0.weight', 'convd3.bn1.bns.0.bias', 'convd3.bn1.bns.1.weight', 'convd3.bn1.bns.1.bias', 'convd3.bn2.bns.0.weight', 'convd3.bn2.bns.0.bias', 'convd3.bn2.bns.1.weight', 'convd3.bn2.bns.1.bias', 'convd3.bn3.bns.0.weight', 'convd3.bn3.bns.0.bias', 'convd3.bn3.bns.1.weight', 'convd3.bn3.bns.1.bias', 'convd4.bn1.bns.0.weight', 'convd4.bn1.bns.0.bias', 'convd4.bn1.bns.1.weight', 'convd4.bn1.bns.1.bias', 'convd4.bn2.bns.0.weight', 'convd4.bn2.bns.0.bias', 'convd4.bn2.bns.1.weight', 'convd4.bn2.bns.1.bias', 'convd4.bn3.bns.0.weight', 'convd4.bn3.bns.0.bias', 'convd4.bn3.bns.1.weight', 'convd4.bn3.bns.1.bias', 'convd5.bn1.bns.0.weight', 'convd5.bn1.bns.0.bias', 'convd5.bn1.bns.1.weight', 'convd5.bn1.bns.1.bias', 'convd5.bn2.bns.0.weight', 'convd5.bn2.bns.0.bias', 'convd5.bn2.bns.1.weight', 'convd5.bn2.bns.1.bias', 'convd5.bn3.bns.0.weight', 'convd5.bn3.bns.0.bias', 'convd5.bn3.bns.1.weight', 'convd5.bn3.bns.1.bias', 'convu4.bn2.bns.0.weight', 'convu4.bn2.bns.0.bias', 'convu4.bn2.bns.1.weight', 'convu4.bn2.bns.1.bias', 'convu4.bn3.bns.0.weight', 'convu4.bn3.bns.0.bias', 'convu4.bn3.bns.1.weight', 'convu4.bn3.bns.1.bias', 'convu3.bn1.bns.0.weight', 'convu3.bn1.bns.0.bias', 'convu3.bn1.bns.1.weight', 'convu3.bn1.bns.1.bias', 'convu3.bn2.bns.0.weight', 'convu3.bn2.bns.0.bias', 'convu3.bn2.bns.1.weight', 'convu3.bn2.bns.1.bias', 'convu3.bn3.bns.0.weight', 'convu3.bn3.bns.0.bias', 'convu3.bn3.bns.1.weight', 'convu3.bn3.bns.1.bias', 'convu2.bn1.bns.0.weight', 'convu2.bn1.bns.0.bias', 'convu2.bn1.bns.1.weight', 'convu2.bn1.bns.1.bias', 'convu2.bn2.bns.0.weight', 'convu2.bn2.bns.0.bias', 'convu2.bn2.bns.1.weight', 'convu2.bn2.bns.1.bias', 'convu2.bn3.bns.0.weight', 'convu2.bn3.bns.0.bias', 'convu2.bn3.bns.1.weight', 'convu2.bn3.bns.1.bias', 'convu1.bn1.bns.0.weight', 'convu1.bn1.bns.0.bias', 'convu1.bn1.bns.1.weight', 'convu1.bn1.bns.1.bias', 'convu1.bn2.bns.0.weight', 'convu1.bn2.bns.0.bias', 'convu1.bn2.bns.1.weight', 'convu1.bn2.bns.1.bias', 'convu1.bn3.bns.0.weight', 'convu1.bn3.bns.0.bias', 'convu1.bn3.bns.1.weight', 'convu1.bn3.bns.1.bias']
+2024-11-06 00:08:58,679 - root - INFO - optimizer for adaptation: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    eps: 1e-08
+    foreach: None
+    lr: 0.001
+    maximize: False
+    weight_decay: 0.0
+)
+2024-11-06 00:08:58,684 - root - INFO - resetting model
+2024-11-06 00:12:32,971 - root - INFO - [flair] Dice: 0.063, HD: 1.5e+01, AHD: 5.8
+2024-11-06 00:12:32,989 - root - INFO - resetting model
+2024-11-06 00:16:11,677 - root - INFO - [t1] Dice: 0.041, HD: 1.5e+01, AHD: 5.8
+2024-11-06 00:16:11,694 - root - INFO - resetting model
+2024-11-06 00:19:59,280 - root - INFO - test-time adaptation: TENT
+2024-11-06 00:19:59,291 - root - INFO - model for adaptation: Unet2D(
+  (convd1): ConvD(
+    (conv1): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd2): ConvD(
+    (conv1): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd3): ConvD(
+    (conv1): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd4): ConvD(
+    (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd5): ConvD(
+    (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convu4): ConvU(
+    (pool): MyUpsample2()
+    (conv2): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu3): ConvU(
+    (conv1): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu2): ConvU(
+    (conv1): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu1): ConvU(
+    (conv1): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(32, 16, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (seg1): Conv2d(32, 2, kernel_size=(1, 1), stride=(1, 1))
+)
+2024-11-06 00:19:59,292 - root - INFO - params for adaptation: ['convd1.bn1.bns.0.weight', 'convd1.bn1.bns.0.bias', 'convd1.bn1.bns.1.weight', 'convd1.bn1.bns.1.bias', 'convd1.bn2.bns.0.weight', 'convd1.bn2.bns.0.bias', 'convd1.bn2.bns.1.weight', 'convd1.bn2.bns.1.bias', 'convd1.bn3.bns.0.weight', 'convd1.bn3.bns.0.bias', 'convd1.bn3.bns.1.weight', 'convd1.bn3.bns.1.bias', 'convd2.bn1.bns.0.weight', 'convd2.bn1.bns.0.bias', 'convd2.bn1.bns.1.weight', 'convd2.bn1.bns.1.bias', 'convd2.bn2.bns.0.weight', 'convd2.bn2.bns.0.bias', 'convd2.bn2.bns.1.weight', 'convd2.bn2.bns.1.bias', 'convd2.bn3.bns.0.weight', 'convd2.bn3.bns.0.bias', 'convd2.bn3.bns.1.weight', 'convd2.bn3.bns.1.bias', 'convd3.bn1.bns.0.weight', 'convd3.bn1.bns.0.bias', 'convd3.bn1.bns.1.weight', 'convd3.bn1.bns.1.bias', 'convd3.bn2.bns.0.weight', 'convd3.bn2.bns.0.bias', 'convd3.bn2.bns.1.weight', 'convd3.bn2.bns.1.bias', 'convd3.bn3.bns.0.weight', 'convd3.bn3.bns.0.bias', 'convd3.bn3.bns.1.weight', 'convd3.bn3.bns.1.bias', 'convd4.bn1.bns.0.weight', 'convd4.bn1.bns.0.bias', 'convd4.bn1.bns.1.weight', 'convd4.bn1.bns.1.bias', 'convd4.bn2.bns.0.weight', 'convd4.bn2.bns.0.bias', 'convd4.bn2.bns.1.weight', 'convd4.bn2.bns.1.bias', 'convd4.bn3.bns.0.weight', 'convd4.bn3.bns.0.bias', 'convd4.bn3.bns.1.weight', 'convd4.bn3.bns.1.bias', 'convd5.bn1.bns.0.weight', 'convd5.bn1.bns.0.bias', 'convd5.bn1.bns.1.weight', 'convd5.bn1.bns.1.bias', 'convd5.bn2.bns.0.weight', 'convd5.bn2.bns.0.bias', 'convd5.bn2.bns.1.weight', 'convd5.bn2.bns.1.bias', 'convd5.bn3.bns.0.weight', 'convd5.bn3.bns.0.bias', 'convd5.bn3.bns.1.weight', 'convd5.bn3.bns.1.bias', 'convu4.bn2.bns.0.weight', 'convu4.bn2.bns.0.bias', 'convu4.bn2.bns.1.weight', 'convu4.bn2.bns.1.bias', 'convu4.bn3.bns.0.weight', 'convu4.bn3.bns.0.bias', 'convu4.bn3.bns.1.weight', 'convu4.bn3.bns.1.bias', 'convu3.bn1.bns.0.weight', 'convu3.bn1.bns.0.bias', 'convu3.bn1.bns.1.weight', 'convu3.bn1.bns.1.bias', 'convu3.bn2.bns.0.weight', 'convu3.bn2.bns.0.bias', 'convu3.bn2.bns.1.weight', 'convu3.bn2.bns.1.bias', 'convu3.bn3.bns.0.weight', 'convu3.bn3.bns.0.bias', 'convu3.bn3.bns.1.weight', 'convu3.bn3.bns.1.bias', 'convu2.bn1.bns.0.weight', 'convu2.bn1.bns.0.bias', 'convu2.bn1.bns.1.weight', 'convu2.bn1.bns.1.bias', 'convu2.bn2.bns.0.weight', 'convu2.bn2.bns.0.bias', 'convu2.bn2.bns.1.weight', 'convu2.bn2.bns.1.bias', 'convu2.bn3.bns.0.weight', 'convu2.bn3.bns.0.bias', 'convu2.bn3.bns.1.weight', 'convu2.bn3.bns.1.bias', 'convu1.bn1.bns.0.weight', 'convu1.bn1.bns.0.bias', 'convu1.bn1.bns.1.weight', 'convu1.bn1.bns.1.bias', 'convu1.bn2.bns.0.weight', 'convu1.bn2.bns.0.bias', 'convu1.bn2.bns.1.weight', 'convu1.bn2.bns.1.bias', 'convu1.bn3.bns.0.weight', 'convu1.bn3.bns.0.bias', 'convu1.bn3.bns.1.weight', 'convu1.bn3.bns.1.bias']
+2024-11-06 00:19:59,292 - root - INFO - optimizer for adaptation: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    eps: 1e-08
+    foreach: None
+    lr: 0.001
+    maximize: False
+    weight_decay: 0.0
+)
+2024-11-06 00:19:59,298 - root - INFO - resetting model
+2024-11-06 00:20:11,648 - root - INFO - test-time adaptation: TENT
+2024-11-06 00:20:11,658 - root - INFO - model for adaptation: Unet2D(
+  (convd1): ConvD(
+    (conv1): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd2): ConvD(
+    (conv1): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd3): ConvD(
+    (conv1): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd4): ConvD(
+    (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd5): ConvD(
+    (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convu4): ConvU(
+    (pool): MyUpsample2()
+    (conv2): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu3): ConvU(
+    (conv1): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu2): ConvU(
+    (conv1): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu1): ConvU(
+    (conv1): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(32, 16, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (seg1): Conv2d(32, 2, kernel_size=(1, 1), stride=(1, 1))
+)
+2024-11-06 00:20:11,660 - root - INFO - params for adaptation: ['convd1.bn1.bns.0.weight', 'convd1.bn1.bns.0.bias', 'convd1.bn1.bns.1.weight', 'convd1.bn1.bns.1.bias', 'convd1.bn2.bns.0.weight', 'convd1.bn2.bns.0.bias', 'convd1.bn2.bns.1.weight', 'convd1.bn2.bns.1.bias', 'convd1.bn3.bns.0.weight', 'convd1.bn3.bns.0.bias', 'convd1.bn3.bns.1.weight', 'convd1.bn3.bns.1.bias', 'convd2.bn1.bns.0.weight', 'convd2.bn1.bns.0.bias', 'convd2.bn1.bns.1.weight', 'convd2.bn1.bns.1.bias', 'convd2.bn2.bns.0.weight', 'convd2.bn2.bns.0.bias', 'convd2.bn2.bns.1.weight', 'convd2.bn2.bns.1.bias', 'convd2.bn3.bns.0.weight', 'convd2.bn3.bns.0.bias', 'convd2.bn3.bns.1.weight', 'convd2.bn3.bns.1.bias', 'convd3.bn1.bns.0.weight', 'convd3.bn1.bns.0.bias', 'convd3.bn1.bns.1.weight', 'convd3.bn1.bns.1.bias', 'convd3.bn2.bns.0.weight', 'convd3.bn2.bns.0.bias', 'convd3.bn2.bns.1.weight', 'convd3.bn2.bns.1.bias', 'convd3.bn3.bns.0.weight', 'convd3.bn3.bns.0.bias', 'convd3.bn3.bns.1.weight', 'convd3.bn3.bns.1.bias', 'convd4.bn1.bns.0.weight', 'convd4.bn1.bns.0.bias', 'convd4.bn1.bns.1.weight', 'convd4.bn1.bns.1.bias', 'convd4.bn2.bns.0.weight', 'convd4.bn2.bns.0.bias', 'convd4.bn2.bns.1.weight', 'convd4.bn2.bns.1.bias', 'convd4.bn3.bns.0.weight', 'convd4.bn3.bns.0.bias', 'convd4.bn3.bns.1.weight', 'convd4.bn3.bns.1.bias', 'convd5.bn1.bns.0.weight', 'convd5.bn1.bns.0.bias', 'convd5.bn1.bns.1.weight', 'convd5.bn1.bns.1.bias', 'convd5.bn2.bns.0.weight', 'convd5.bn2.bns.0.bias', 'convd5.bn2.bns.1.weight', 'convd5.bn2.bns.1.bias', 'convd5.bn3.bns.0.weight', 'convd5.bn3.bns.0.bias', 'convd5.bn3.bns.1.weight', 'convd5.bn3.bns.1.bias', 'convu4.bn2.bns.0.weight', 'convu4.bn2.bns.0.bias', 'convu4.bn2.bns.1.weight', 'convu4.bn2.bns.1.bias', 'convu4.bn3.bns.0.weight', 'convu4.bn3.bns.0.bias', 'convu4.bn3.bns.1.weight', 'convu4.bn3.bns.1.bias', 'convu3.bn1.bns.0.weight', 'convu3.bn1.bns.0.bias', 'convu3.bn1.bns.1.weight', 'convu3.bn1.bns.1.bias', 'convu3.bn2.bns.0.weight', 'convu3.bn2.bns.0.bias', 'convu3.bn2.bns.1.weight', 'convu3.bn2.bns.1.bias', 'convu3.bn3.bns.0.weight', 'convu3.bn3.bns.0.bias', 'convu3.bn3.bns.1.weight', 'convu3.bn3.bns.1.bias', 'convu2.bn1.bns.0.weight', 'convu2.bn1.bns.0.bias', 'convu2.bn1.bns.1.weight', 'convu2.bn1.bns.1.bias', 'convu2.bn2.bns.0.weight', 'convu2.bn2.bns.0.bias', 'convu2.bn2.bns.1.weight', 'convu2.bn2.bns.1.bias', 'convu2.bn3.bns.0.weight', 'convu2.bn3.bns.0.bias', 'convu2.bn3.bns.1.weight', 'convu2.bn3.bns.1.bias', 'convu1.bn1.bns.0.weight', 'convu1.bn1.bns.0.bias', 'convu1.bn1.bns.1.weight', 'convu1.bn1.bns.1.bias', 'convu1.bn2.bns.0.weight', 'convu1.bn2.bns.0.bias', 'convu1.bn2.bns.1.weight', 'convu1.bn2.bns.1.bias', 'convu1.bn3.bns.0.weight', 'convu1.bn3.bns.0.bias', 'convu1.bn3.bns.1.weight', 'convu1.bn3.bns.1.bias']
+2024-11-06 00:20:11,660 - root - INFO - optimizer for adaptation: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    eps: 1e-08
+    foreach: None
+    lr: 0.001
+    maximize: False
+    weight_decay: 0.0
+)
+2024-11-06 00:20:11,665 - root - INFO - resetting model
+2024-11-06 00:23:23,122 - root - INFO - test-time adaptation: TENT
+2024-11-06 00:23:23,133 - root - INFO - model for adaptation: Unet2D(
+  (convd1): ConvD(
+    (conv1): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd2): ConvD(
+    (conv1): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd3): ConvD(
+    (conv1): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd4): ConvD(
+    (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd5): ConvD(
+    (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convu4): ConvU(
+    (pool): MyUpsample2()
+    (conv2): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu3): ConvU(
+    (conv1): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu2): ConvU(
+    (conv1): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu1): ConvU(
+    (conv1): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(32, 16, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (seg1): Conv2d(32, 2, kernel_size=(1, 1), stride=(1, 1))
+)
+2024-11-06 00:23:23,134 - root - INFO - params for adaptation: ['convd1.bn1.bns.0.weight', 'convd1.bn1.bns.0.bias', 'convd1.bn1.bns.1.weight', 'convd1.bn1.bns.1.bias', 'convd1.bn2.bns.0.weight', 'convd1.bn2.bns.0.bias', 'convd1.bn2.bns.1.weight', 'convd1.bn2.bns.1.bias', 'convd1.bn3.bns.0.weight', 'convd1.bn3.bns.0.bias', 'convd1.bn3.bns.1.weight', 'convd1.bn3.bns.1.bias', 'convd2.bn1.bns.0.weight', 'convd2.bn1.bns.0.bias', 'convd2.bn1.bns.1.weight', 'convd2.bn1.bns.1.bias', 'convd2.bn2.bns.0.weight', 'convd2.bn2.bns.0.bias', 'convd2.bn2.bns.1.weight', 'convd2.bn2.bns.1.bias', 'convd2.bn3.bns.0.weight', 'convd2.bn3.bns.0.bias', 'convd2.bn3.bns.1.weight', 'convd2.bn3.bns.1.bias', 'convd3.bn1.bns.0.weight', 'convd3.bn1.bns.0.bias', 'convd3.bn1.bns.1.weight', 'convd3.bn1.bns.1.bias', 'convd3.bn2.bns.0.weight', 'convd3.bn2.bns.0.bias', 'convd3.bn2.bns.1.weight', 'convd3.bn2.bns.1.bias', 'convd3.bn3.bns.0.weight', 'convd3.bn3.bns.0.bias', 'convd3.bn3.bns.1.weight', 'convd3.bn3.bns.1.bias', 'convd4.bn1.bns.0.weight', 'convd4.bn1.bns.0.bias', 'convd4.bn1.bns.1.weight', 'convd4.bn1.bns.1.bias', 'convd4.bn2.bns.0.weight', 'convd4.bn2.bns.0.bias', 'convd4.bn2.bns.1.weight', 'convd4.bn2.bns.1.bias', 'convd4.bn3.bns.0.weight', 'convd4.bn3.bns.0.bias', 'convd4.bn3.bns.1.weight', 'convd4.bn3.bns.1.bias', 'convd5.bn1.bns.0.weight', 'convd5.bn1.bns.0.bias', 'convd5.bn1.bns.1.weight', 'convd5.bn1.bns.1.bias', 'convd5.bn2.bns.0.weight', 'convd5.bn2.bns.0.bias', 'convd5.bn2.bns.1.weight', 'convd5.bn2.bns.1.bias', 'convd5.bn3.bns.0.weight', 'convd5.bn3.bns.0.bias', 'convd5.bn3.bns.1.weight', 'convd5.bn3.bns.1.bias', 'convu4.bn2.bns.0.weight', 'convu4.bn2.bns.0.bias', 'convu4.bn2.bns.1.weight', 'convu4.bn2.bns.1.bias', 'convu4.bn3.bns.0.weight', 'convu4.bn3.bns.0.bias', 'convu4.bn3.bns.1.weight', 'convu4.bn3.bns.1.bias', 'convu3.bn1.bns.0.weight', 'convu3.bn1.bns.0.bias', 'convu3.bn1.bns.1.weight', 'convu3.bn1.bns.1.bias', 'convu3.bn2.bns.0.weight', 'convu3.bn2.bns.0.bias', 'convu3.bn2.bns.1.weight', 'convu3.bn2.bns.1.bias', 'convu3.bn3.bns.0.weight', 'convu3.bn3.bns.0.bias', 'convu3.bn3.bns.1.weight', 'convu3.bn3.bns.1.bias', 'convu2.bn1.bns.0.weight', 'convu2.bn1.bns.0.bias', 'convu2.bn1.bns.1.weight', 'convu2.bn1.bns.1.bias', 'convu2.bn2.bns.0.weight', 'convu2.bn2.bns.0.bias', 'convu2.bn2.bns.1.weight', 'convu2.bn2.bns.1.bias', 'convu2.bn3.bns.0.weight', 'convu2.bn3.bns.0.bias', 'convu2.bn3.bns.1.weight', 'convu2.bn3.bns.1.bias', 'convu1.bn1.bns.0.weight', 'convu1.bn1.bns.0.bias', 'convu1.bn1.bns.1.weight', 'convu1.bn1.bns.1.bias', 'convu1.bn2.bns.0.weight', 'convu1.bn2.bns.0.bias', 'convu1.bn2.bns.1.weight', 'convu1.bn2.bns.1.bias', 'convu1.bn3.bns.0.weight', 'convu1.bn3.bns.0.bias', 'convu1.bn3.bns.1.weight', 'convu1.bn3.bns.1.bias']
+2024-11-06 00:23:23,134 - root - INFO - optimizer for adaptation: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    eps: 1e-08
+    foreach: None
+    lr: 0.001
+    maximize: False
+    weight_decay: 0.0
+)
+2024-11-06 00:23:23,140 - root - INFO - resetting model
+2024-11-06 00:25:52,075 - root - INFO - test-time adaptation: TENT
+2024-11-06 00:25:52,086 - root - INFO - model for adaptation: Unet2D(
+  (convd1): ConvD(
+    (conv1): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd2): ConvD(
+    (conv1): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd3): ConvD(
+    (conv1): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd4): ConvD(
+    (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd5): ConvD(
+    (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convu4): ConvU(
+    (pool): MyUpsample2()
+    (conv2): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu3): ConvU(
+    (conv1): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu2): ConvU(
+    (conv1): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu1): ConvU(
+    (conv1): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(32, 16, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (seg1): Conv2d(32, 2, kernel_size=(1, 1), stride=(1, 1))
+)
+2024-11-06 00:25:52,088 - root - INFO - params for adaptation: ['convd1.bn1.bns.0.weight', 'convd1.bn1.bns.0.bias', 'convd1.bn1.bns.1.weight', 'convd1.bn1.bns.1.bias', 'convd1.bn2.bns.0.weight', 'convd1.bn2.bns.0.bias', 'convd1.bn2.bns.1.weight', 'convd1.bn2.bns.1.bias', 'convd1.bn3.bns.0.weight', 'convd1.bn3.bns.0.bias', 'convd1.bn3.bns.1.weight', 'convd1.bn3.bns.1.bias', 'convd2.bn1.bns.0.weight', 'convd2.bn1.bns.0.bias', 'convd2.bn1.bns.1.weight', 'convd2.bn1.bns.1.bias', 'convd2.bn2.bns.0.weight', 'convd2.bn2.bns.0.bias', 'convd2.bn2.bns.1.weight', 'convd2.bn2.bns.1.bias', 'convd2.bn3.bns.0.weight', 'convd2.bn3.bns.0.bias', 'convd2.bn3.bns.1.weight', 'convd2.bn3.bns.1.bias', 'convd3.bn1.bns.0.weight', 'convd3.bn1.bns.0.bias', 'convd3.bn1.bns.1.weight', 'convd3.bn1.bns.1.bias', 'convd3.bn2.bns.0.weight', 'convd3.bn2.bns.0.bias', 'convd3.bn2.bns.1.weight', 'convd3.bn2.bns.1.bias', 'convd3.bn3.bns.0.weight', 'convd3.bn3.bns.0.bias', 'convd3.bn3.bns.1.weight', 'convd3.bn3.bns.1.bias', 'convd4.bn1.bns.0.weight', 'convd4.bn1.bns.0.bias', 'convd4.bn1.bns.1.weight', 'convd4.bn1.bns.1.bias', 'convd4.bn2.bns.0.weight', 'convd4.bn2.bns.0.bias', 'convd4.bn2.bns.1.weight', 'convd4.bn2.bns.1.bias', 'convd4.bn3.bns.0.weight', 'convd4.bn3.bns.0.bias', 'convd4.bn3.bns.1.weight', 'convd4.bn3.bns.1.bias', 'convd5.bn1.bns.0.weight', 'convd5.bn1.bns.0.bias', 'convd5.bn1.bns.1.weight', 'convd5.bn1.bns.1.bias', 'convd5.bn2.bns.0.weight', 'convd5.bn2.bns.0.bias', 'convd5.bn2.bns.1.weight', 'convd5.bn2.bns.1.bias', 'convd5.bn3.bns.0.weight', 'convd5.bn3.bns.0.bias', 'convd5.bn3.bns.1.weight', 'convd5.bn3.bns.1.bias', 'convu4.bn2.bns.0.weight', 'convu4.bn2.bns.0.bias', 'convu4.bn2.bns.1.weight', 'convu4.bn2.bns.1.bias', 'convu4.bn3.bns.0.weight', 'convu4.bn3.bns.0.bias', 'convu4.bn3.bns.1.weight', 'convu4.bn3.bns.1.bias', 'convu3.bn1.bns.0.weight', 'convu3.bn1.bns.0.bias', 'convu3.bn1.bns.1.weight', 'convu3.bn1.bns.1.bias', 'convu3.bn2.bns.0.weight', 'convu3.bn2.bns.0.bias', 'convu3.bn2.bns.1.weight', 'convu3.bn2.bns.1.bias', 'convu3.bn3.bns.0.weight', 'convu3.bn3.bns.0.bias', 'convu3.bn3.bns.1.weight', 'convu3.bn3.bns.1.bias', 'convu2.bn1.bns.0.weight', 'convu2.bn1.bns.0.bias', 'convu2.bn1.bns.1.weight', 'convu2.bn1.bns.1.bias', 'convu2.bn2.bns.0.weight', 'convu2.bn2.bns.0.bias', 'convu2.bn2.bns.1.weight', 'convu2.bn2.bns.1.bias', 'convu2.bn3.bns.0.weight', 'convu2.bn3.bns.0.bias', 'convu2.bn3.bns.1.weight', 'convu2.bn3.bns.1.bias', 'convu1.bn1.bns.0.weight', 'convu1.bn1.bns.0.bias', 'convu1.bn1.bns.1.weight', 'convu1.bn1.bns.1.bias', 'convu1.bn2.bns.0.weight', 'convu1.bn2.bns.0.bias', 'convu1.bn2.bns.1.weight', 'convu1.bn2.bns.1.bias', 'convu1.bn3.bns.0.weight', 'convu1.bn3.bns.0.bias', 'convu1.bn3.bns.1.weight', 'convu1.bn3.bns.1.bias']
+2024-11-06 00:25:52,088 - root - INFO - optimizer for adaptation: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    eps: 1e-08
+    foreach: None
+    lr: 0.001
+    maximize: False
+    weight_decay: 0.0
+)
+2024-11-06 00:25:52,094 - root - INFO - resetting model
+2024-11-06 00:29:52,234 - root - INFO - test-time adaptation: TENT
+2024-11-06 00:29:52,245 - root - INFO - model for adaptation: Unet2D(
+  (convd1): ConvD(
+    (conv1): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd2): ConvD(
+    (conv1): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd3): ConvD(
+    (conv1): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd4): ConvD(
+    (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd5): ConvD(
+    (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convu4): ConvU(
+    (pool): MyUpsample2()
+    (conv2): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu3): ConvU(
+    (conv1): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu2): ConvU(
+    (conv1): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu1): ConvU(
+    (conv1): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(32, 16, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (seg1): Conv2d(32, 2, kernel_size=(1, 1), stride=(1, 1))
+)
+2024-11-06 00:29:52,246 - root - INFO - params for adaptation: ['convd1.bn1.bns.0.weight', 'convd1.bn1.bns.0.bias', 'convd1.bn1.bns.1.weight', 'convd1.bn1.bns.1.bias', 'convd1.bn2.bns.0.weight', 'convd1.bn2.bns.0.bias', 'convd1.bn2.bns.1.weight', 'convd1.bn2.bns.1.bias', 'convd1.bn3.bns.0.weight', 'convd1.bn3.bns.0.bias', 'convd1.bn3.bns.1.weight', 'convd1.bn3.bns.1.bias', 'convd2.bn1.bns.0.weight', 'convd2.bn1.bns.0.bias', 'convd2.bn1.bns.1.weight', 'convd2.bn1.bns.1.bias', 'convd2.bn2.bns.0.weight', 'convd2.bn2.bns.0.bias', 'convd2.bn2.bns.1.weight', 'convd2.bn2.bns.1.bias', 'convd2.bn3.bns.0.weight', 'convd2.bn3.bns.0.bias', 'convd2.bn3.bns.1.weight', 'convd2.bn3.bns.1.bias', 'convd3.bn1.bns.0.weight', 'convd3.bn1.bns.0.bias', 'convd3.bn1.bns.1.weight', 'convd3.bn1.bns.1.bias', 'convd3.bn2.bns.0.weight', 'convd3.bn2.bns.0.bias', 'convd3.bn2.bns.1.weight', 'convd3.bn2.bns.1.bias', 'convd3.bn3.bns.0.weight', 'convd3.bn3.bns.0.bias', 'convd3.bn3.bns.1.weight', 'convd3.bn3.bns.1.bias', 'convd4.bn1.bns.0.weight', 'convd4.bn1.bns.0.bias', 'convd4.bn1.bns.1.weight', 'convd4.bn1.bns.1.bias', 'convd4.bn2.bns.0.weight', 'convd4.bn2.bns.0.bias', 'convd4.bn2.bns.1.weight', 'convd4.bn2.bns.1.bias', 'convd4.bn3.bns.0.weight', 'convd4.bn3.bns.0.bias', 'convd4.bn3.bns.1.weight', 'convd4.bn3.bns.1.bias', 'convd5.bn1.bns.0.weight', 'convd5.bn1.bns.0.bias', 'convd5.bn1.bns.1.weight', 'convd5.bn1.bns.1.bias', 'convd5.bn2.bns.0.weight', 'convd5.bn2.bns.0.bias', 'convd5.bn2.bns.1.weight', 'convd5.bn2.bns.1.bias', 'convd5.bn3.bns.0.weight', 'convd5.bn3.bns.0.bias', 'convd5.bn3.bns.1.weight', 'convd5.bn3.bns.1.bias', 'convu4.bn2.bns.0.weight', 'convu4.bn2.bns.0.bias', 'convu4.bn2.bns.1.weight', 'convu4.bn2.bns.1.bias', 'convu4.bn3.bns.0.weight', 'convu4.bn3.bns.0.bias', 'convu4.bn3.bns.1.weight', 'convu4.bn3.bns.1.bias', 'convu3.bn1.bns.0.weight', 'convu3.bn1.bns.0.bias', 'convu3.bn1.bns.1.weight', 'convu3.bn1.bns.1.bias', 'convu3.bn2.bns.0.weight', 'convu3.bn2.bns.0.bias', 'convu3.bn2.bns.1.weight', 'convu3.bn2.bns.1.bias', 'convu3.bn3.bns.0.weight', 'convu3.bn3.bns.0.bias', 'convu3.bn3.bns.1.weight', 'convu3.bn3.bns.1.bias', 'convu2.bn1.bns.0.weight', 'convu2.bn1.bns.0.bias', 'convu2.bn1.bns.1.weight', 'convu2.bn1.bns.1.bias', 'convu2.bn2.bns.0.weight', 'convu2.bn2.bns.0.bias', 'convu2.bn2.bns.1.weight', 'convu2.bn2.bns.1.bias', 'convu2.bn3.bns.0.weight', 'convu2.bn3.bns.0.bias', 'convu2.bn3.bns.1.weight', 'convu2.bn3.bns.1.bias', 'convu1.bn1.bns.0.weight', 'convu1.bn1.bns.0.bias', 'convu1.bn1.bns.1.weight', 'convu1.bn1.bns.1.bias', 'convu1.bn2.bns.0.weight', 'convu1.bn2.bns.0.bias', 'convu1.bn2.bns.1.weight', 'convu1.bn2.bns.1.bias', 'convu1.bn3.bns.0.weight', 'convu1.bn3.bns.0.bias', 'convu1.bn3.bns.1.weight', 'convu1.bn3.bns.1.bias']
+2024-11-06 00:29:52,246 - root - INFO - optimizer for adaptation: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    eps: 1e-08
+    foreach: None
+    lr: 0.001
+    maximize: False
+    weight_decay: 0.0
+)
+2024-11-06 00:29:52,252 - root - INFO - resetting model
+2024-11-06 00:32:45,147 - root - INFO - test-time adaptation: TENT
+2024-11-06 00:32:45,158 - root - INFO - model for adaptation: Unet2D(
+  (convd1): ConvD(
+    (conv1): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd2): ConvD(
+    (conv1): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd3): ConvD(
+    (conv1): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd4): ConvD(
+    (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd5): ConvD(
+    (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convu4): ConvU(
+    (pool): MyUpsample2()
+    (conv2): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu3): ConvU(
+    (conv1): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu2): ConvU(
+    (conv1): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu1): ConvU(
+    (conv1): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(32, 16, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (seg1): Conv2d(32, 2, kernel_size=(1, 1), stride=(1, 1))
+)
+2024-11-06 00:32:45,160 - root - INFO - params for adaptation: ['convd1.bn1.bns.0.weight', 'convd1.bn1.bns.0.bias', 'convd1.bn1.bns.1.weight', 'convd1.bn1.bns.1.bias', 'convd1.bn2.bns.0.weight', 'convd1.bn2.bns.0.bias', 'convd1.bn2.bns.1.weight', 'convd1.bn2.bns.1.bias', 'convd1.bn3.bns.0.weight', 'convd1.bn3.bns.0.bias', 'convd1.bn3.bns.1.weight', 'convd1.bn3.bns.1.bias', 'convd2.bn1.bns.0.weight', 'convd2.bn1.bns.0.bias', 'convd2.bn1.bns.1.weight', 'convd2.bn1.bns.1.bias', 'convd2.bn2.bns.0.weight', 'convd2.bn2.bns.0.bias', 'convd2.bn2.bns.1.weight', 'convd2.bn2.bns.1.bias', 'convd2.bn3.bns.0.weight', 'convd2.bn3.bns.0.bias', 'convd2.bn3.bns.1.weight', 'convd2.bn3.bns.1.bias', 'convd3.bn1.bns.0.weight', 'convd3.bn1.bns.0.bias', 'convd3.bn1.bns.1.weight', 'convd3.bn1.bns.1.bias', 'convd3.bn2.bns.0.weight', 'convd3.bn2.bns.0.bias', 'convd3.bn2.bns.1.weight', 'convd3.bn2.bns.1.bias', 'convd3.bn3.bns.0.weight', 'convd3.bn3.bns.0.bias', 'convd3.bn3.bns.1.weight', 'convd3.bn3.bns.1.bias', 'convd4.bn1.bns.0.weight', 'convd4.bn1.bns.0.bias', 'convd4.bn1.bns.1.weight', 'convd4.bn1.bns.1.bias', 'convd4.bn2.bns.0.weight', 'convd4.bn2.bns.0.bias', 'convd4.bn2.bns.1.weight', 'convd4.bn2.bns.1.bias', 'convd4.bn3.bns.0.weight', 'convd4.bn3.bns.0.bias', 'convd4.bn3.bns.1.weight', 'convd4.bn3.bns.1.bias', 'convd5.bn1.bns.0.weight', 'convd5.bn1.bns.0.bias', 'convd5.bn1.bns.1.weight', 'convd5.bn1.bns.1.bias', 'convd5.bn2.bns.0.weight', 'convd5.bn2.bns.0.bias', 'convd5.bn2.bns.1.weight', 'convd5.bn2.bns.1.bias', 'convd5.bn3.bns.0.weight', 'convd5.bn3.bns.0.bias', 'convd5.bn3.bns.1.weight', 'convd5.bn3.bns.1.bias', 'convu4.bn2.bns.0.weight', 'convu4.bn2.bns.0.bias', 'convu4.bn2.bns.1.weight', 'convu4.bn2.bns.1.bias', 'convu4.bn3.bns.0.weight', 'convu4.bn3.bns.0.bias', 'convu4.bn3.bns.1.weight', 'convu4.bn3.bns.1.bias', 'convu3.bn1.bns.0.weight', 'convu3.bn1.bns.0.bias', 'convu3.bn1.bns.1.weight', 'convu3.bn1.bns.1.bias', 'convu3.bn2.bns.0.weight', 'convu3.bn2.bns.0.bias', 'convu3.bn2.bns.1.weight', 'convu3.bn2.bns.1.bias', 'convu3.bn3.bns.0.weight', 'convu3.bn3.bns.0.bias', 'convu3.bn3.bns.1.weight', 'convu3.bn3.bns.1.bias', 'convu2.bn1.bns.0.weight', 'convu2.bn1.bns.0.bias', 'convu2.bn1.bns.1.weight', 'convu2.bn1.bns.1.bias', 'convu2.bn2.bns.0.weight', 'convu2.bn2.bns.0.bias', 'convu2.bn2.bns.1.weight', 'convu2.bn2.bns.1.bias', 'convu2.bn3.bns.0.weight', 'convu2.bn3.bns.0.bias', 'convu2.bn3.bns.1.weight', 'convu2.bn3.bns.1.bias', 'convu1.bn1.bns.0.weight', 'convu1.bn1.bns.0.bias', 'convu1.bn1.bns.1.weight', 'convu1.bn1.bns.1.bias', 'convu1.bn2.bns.0.weight', 'convu1.bn2.bns.0.bias', 'convu1.bn2.bns.1.weight', 'convu1.bn2.bns.1.bias', 'convu1.bn3.bns.0.weight', 'convu1.bn3.bns.0.bias', 'convu1.bn3.bns.1.weight', 'convu1.bn3.bns.1.bias']
+2024-11-06 00:32:45,160 - root - INFO - optimizer for adaptation: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    eps: 1e-08
+    foreach: None
+    lr: 0.001
+    maximize: False
+    weight_decay: 0.0
+)
+2024-11-06 00:32:45,166 - root - INFO - resetting model
+2024-11-06 00:34:36,342 - root - INFO - test-time adaptation: TENT
+2024-11-06 00:34:36,353 - root - INFO - model for adaptation: Unet2D(
+  (convd1): ConvD(
+    (conv1): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd2): ConvD(
+    (conv1): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd3): ConvD(
+    (conv1): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd4): ConvD(
+    (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd5): ConvD(
+    (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convu4): ConvU(
+    (pool): MyUpsample2()
+    (conv2): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu3): ConvU(
+    (conv1): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu2): ConvU(
+    (conv1): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu1): ConvU(
+    (conv1): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(32, 16, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (seg1): Conv2d(32, 2, kernel_size=(1, 1), stride=(1, 1))
+)
+2024-11-06 00:34:36,354 - root - INFO - params for adaptation: ['convd1.bn1.bns.0.weight', 'convd1.bn1.bns.0.bias', 'convd1.bn1.bns.1.weight', 'convd1.bn1.bns.1.bias', 'convd1.bn2.bns.0.weight', 'convd1.bn2.bns.0.bias', 'convd1.bn2.bns.1.weight', 'convd1.bn2.bns.1.bias', 'convd1.bn3.bns.0.weight', 'convd1.bn3.bns.0.bias', 'convd1.bn3.bns.1.weight', 'convd1.bn3.bns.1.bias', 'convd2.bn1.bns.0.weight', 'convd2.bn1.bns.0.bias', 'convd2.bn1.bns.1.weight', 'convd2.bn1.bns.1.bias', 'convd2.bn2.bns.0.weight', 'convd2.bn2.bns.0.bias', 'convd2.bn2.bns.1.weight', 'convd2.bn2.bns.1.bias', 'convd2.bn3.bns.0.weight', 'convd2.bn3.bns.0.bias', 'convd2.bn3.bns.1.weight', 'convd2.bn3.bns.1.bias', 'convd3.bn1.bns.0.weight', 'convd3.bn1.bns.0.bias', 'convd3.bn1.bns.1.weight', 'convd3.bn1.bns.1.bias', 'convd3.bn2.bns.0.weight', 'convd3.bn2.bns.0.bias', 'convd3.bn2.bns.1.weight', 'convd3.bn2.bns.1.bias', 'convd3.bn3.bns.0.weight', 'convd3.bn3.bns.0.bias', 'convd3.bn3.bns.1.weight', 'convd3.bn3.bns.1.bias', 'convd4.bn1.bns.0.weight', 'convd4.bn1.bns.0.bias', 'convd4.bn1.bns.1.weight', 'convd4.bn1.bns.1.bias', 'convd4.bn2.bns.0.weight', 'convd4.bn2.bns.0.bias', 'convd4.bn2.bns.1.weight', 'convd4.bn2.bns.1.bias', 'convd4.bn3.bns.0.weight', 'convd4.bn3.bns.0.bias', 'convd4.bn3.bns.1.weight', 'convd4.bn3.bns.1.bias', 'convd5.bn1.bns.0.weight', 'convd5.bn1.bns.0.bias', 'convd5.bn1.bns.1.weight', 'convd5.bn1.bns.1.bias', 'convd5.bn2.bns.0.weight', 'convd5.bn2.bns.0.bias', 'convd5.bn2.bns.1.weight', 'convd5.bn2.bns.1.bias', 'convd5.bn3.bns.0.weight', 'convd5.bn3.bns.0.bias', 'convd5.bn3.bns.1.weight', 'convd5.bn3.bns.1.bias', 'convu4.bn2.bns.0.weight', 'convu4.bn2.bns.0.bias', 'convu4.bn2.bns.1.weight', 'convu4.bn2.bns.1.bias', 'convu4.bn3.bns.0.weight', 'convu4.bn3.bns.0.bias', 'convu4.bn3.bns.1.weight', 'convu4.bn3.bns.1.bias', 'convu3.bn1.bns.0.weight', 'convu3.bn1.bns.0.bias', 'convu3.bn1.bns.1.weight', 'convu3.bn1.bns.1.bias', 'convu3.bn2.bns.0.weight', 'convu3.bn2.bns.0.bias', 'convu3.bn2.bns.1.weight', 'convu3.bn2.bns.1.bias', 'convu3.bn3.bns.0.weight', 'convu3.bn3.bns.0.bias', 'convu3.bn3.bns.1.weight', 'convu3.bn3.bns.1.bias', 'convu2.bn1.bns.0.weight', 'convu2.bn1.bns.0.bias', 'convu2.bn1.bns.1.weight', 'convu2.bn1.bns.1.bias', 'convu2.bn2.bns.0.weight', 'convu2.bn2.bns.0.bias', 'convu2.bn2.bns.1.weight', 'convu2.bn2.bns.1.bias', 'convu2.bn3.bns.0.weight', 'convu2.bn3.bns.0.bias', 'convu2.bn3.bns.1.weight', 'convu2.bn3.bns.1.bias', 'convu1.bn1.bns.0.weight', 'convu1.bn1.bns.0.bias', 'convu1.bn1.bns.1.weight', 'convu1.bn1.bns.1.bias', 'convu1.bn2.bns.0.weight', 'convu1.bn2.bns.0.bias', 'convu1.bn2.bns.1.weight', 'convu1.bn2.bns.1.bias', 'convu1.bn3.bns.0.weight', 'convu1.bn3.bns.0.bias', 'convu1.bn3.bns.1.weight', 'convu1.bn3.bns.1.bias']
+2024-11-06 00:34:36,355 - root - INFO - optimizer for adaptation: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    eps: 1e-08
+    foreach: None
+    lr: 0.001
+    maximize: False
+    weight_decay: 0.0
+)
+2024-11-06 00:34:36,360 - root - INFO - resetting model
+2024-11-06 00:38:44,348 - root - INFO - [flair] Dice: 0.76, HD: 6.8, AHD: 0.85
+2024-11-06 00:38:44,355 - root - INFO - resetting model
+2024-11-06 00:42:45,170 - root - INFO - [t1] Dice: 0.052, HD: 1.8e+01, AHD: 6.1
+2024-11-06 00:42:45,187 - root - INFO - resetting model
+2024-11-06 11:28:33,287 - root - INFO - test-time adaptation: TENT
+2024-11-06 11:28:33,297 - root - INFO - model for adaptation: Unet2D(
+  (convd1): ConvD(
+    (conv1): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd2): ConvD(
+    (conv1): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd3): ConvD(
+    (conv1): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd4): ConvD(
+    (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convd5): ConvD(
+    (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+  )
+  (convu4): ConvU(
+    (pool): MyUpsample2()
+    (conv2): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu3): ConvU(
+    (conv1): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu2): ConvU(
+    (conv1): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (convu1): ConvU(
+    (conv1): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn1): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (pool): MyUpsample2()
+    (conv2): Conv2d(32, 16, kernel_size=(1, 1), stride=(1, 1))
+    (bn2): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (conv3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (bn3): DomainSpecificBatchNorm2d(
+      (bns): ModuleList(
+        (0): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+        (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+      )
+    )
+    (relu): ReLU(inplace=True)
+  )
+  (seg1): Conv2d(32, 2, kernel_size=(1, 1), stride=(1, 1))
+)
+2024-11-06 11:28:33,299 - root - INFO - params for adaptation: ['convd1.bn1.bns.0.weight', 'convd1.bn1.bns.0.bias', 'convd1.bn1.bns.1.weight', 'convd1.bn1.bns.1.bias', 'convd1.bn2.bns.0.weight', 'convd1.bn2.bns.0.bias', 'convd1.bn2.bns.1.weight', 'convd1.bn2.bns.1.bias', 'convd1.bn3.bns.0.weight', 'convd1.bn3.bns.0.bias', 'convd1.bn3.bns.1.weight', 'convd1.bn3.bns.1.bias', 'convd2.bn1.bns.0.weight', 'convd2.bn1.bns.0.bias', 'convd2.bn1.bns.1.weight', 'convd2.bn1.bns.1.bias', 'convd2.bn2.bns.0.weight', 'convd2.bn2.bns.0.bias', 'convd2.bn2.bns.1.weight', 'convd2.bn2.bns.1.bias', 'convd2.bn3.bns.0.weight', 'convd2.bn3.bns.0.bias', 'convd2.bn3.bns.1.weight', 'convd2.bn3.bns.1.bias', 'convd3.bn1.bns.0.weight', 'convd3.bn1.bns.0.bias', 'convd3.bn1.bns.1.weight', 'convd3.bn1.bns.1.bias', 'convd3.bn2.bns.0.weight', 'convd3.bn2.bns.0.bias', 'convd3.bn2.bns.1.weight', 'convd3.bn2.bns.1.bias', 'convd3.bn3.bns.0.weight', 'convd3.bn3.bns.0.bias', 'convd3.bn3.bns.1.weight', 'convd3.bn3.bns.1.bias', 'convd4.bn1.bns.0.weight', 'convd4.bn1.bns.0.bias', 'convd4.bn1.bns.1.weight', 'convd4.bn1.bns.1.bias', 'convd4.bn2.bns.0.weight', 'convd4.bn2.bns.0.bias', 'convd4.bn2.bns.1.weight', 'convd4.bn2.bns.1.bias', 'convd4.bn3.bns.0.weight', 'convd4.bn3.bns.0.bias', 'convd4.bn3.bns.1.weight', 'convd4.bn3.bns.1.bias', 'convd5.bn1.bns.0.weight', 'convd5.bn1.bns.0.bias', 'convd5.bn1.bns.1.weight', 'convd5.bn1.bns.1.bias', 'convd5.bn2.bns.0.weight', 'convd5.bn2.bns.0.bias', 'convd5.bn2.bns.1.weight', 'convd5.bn2.bns.1.bias', 'convd5.bn3.bns.0.weight', 'convd5.bn3.bns.0.bias', 'convd5.bn3.bns.1.weight', 'convd5.bn3.bns.1.bias', 'convu4.bn2.bns.0.weight', 'convu4.bn2.bns.0.bias', 'convu4.bn2.bns.1.weight', 'convu4.bn2.bns.1.bias', 'convu4.bn3.bns.0.weight', 'convu4.bn3.bns.0.bias', 'convu4.bn3.bns.1.weight', 'convu4.bn3.bns.1.bias', 'convu3.bn1.bns.0.weight', 'convu3.bn1.bns.0.bias', 'convu3.bn1.bns.1.weight', 'convu3.bn1.bns.1.bias', 'convu3.bn2.bns.0.weight', 'convu3.bn2.bns.0.bias', 'convu3.bn2.bns.1.weight', 'convu3.bn2.bns.1.bias', 'convu3.bn3.bns.0.weight', 'convu3.bn3.bns.0.bias', 'convu3.bn3.bns.1.weight', 'convu3.bn3.bns.1.bias', 'convu2.bn1.bns.0.weight', 'convu2.bn1.bns.0.bias', 'convu2.bn1.bns.1.weight', 'convu2.bn1.bns.1.bias', 'convu2.bn2.bns.0.weight', 'convu2.bn2.bns.0.bias', 'convu2.bn2.bns.1.weight', 'convu2.bn2.bns.1.bias', 'convu2.bn3.bns.0.weight', 'convu2.bn3.bns.0.bias', 'convu2.bn3.bns.1.weight', 'convu2.bn3.bns.1.bias', 'convu1.bn1.bns.0.weight', 'convu1.bn1.bns.0.bias', 'convu1.bn1.bns.1.weight', 'convu1.bn1.bns.1.bias', 'convu1.bn2.bns.0.weight', 'convu1.bn2.bns.0.bias', 'convu1.bn2.bns.1.weight', 'convu1.bn2.bns.1.bias', 'convu1.bn3.bns.0.weight', 'convu1.bn3.bns.0.bias', 'convu1.bn3.bns.1.weight', 'convu1.bn3.bns.1.bias']
+2024-11-06 11:28:33,299 - root - INFO - optimizer for adaptation: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    eps: 1e-08
+    foreach: None
+    lr: 0.001
+    maximize: False
+    weight_decay: 0.0
+)
+2024-11-06 11:28:33,312 - root - INFO - resetting model
+2024-11-06 11:32:25,921 - root - INFO - [flair] Dice: 27.74, HD: 19.85, AHD: 2.491
+2024-11-06 11:32:25,938 - root - INFO - resetting model
+2024-11-06 11:36:21,030 - root - INFO - [t1] Dice: 59.28, HD: 12.52, AHD: 0.4113
+2024-11-06 11:36:21,048 - root - INFO - resetting model
+2024-11-06 11:40:09,903 - root - INFO - [t2] Dice: 2.207, HD: 26.75, AHD: 5.859

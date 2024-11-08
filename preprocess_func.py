@@ -107,13 +107,13 @@ def main(data_root, modality, target_root):
 
 
 if __name__ == '__main__':
-    data_root = 'Your Nii Training Data Folder'
-    target_root = 'Your Npz Training Data Folder'
-    modality = 't2'
+    data_root = '/data1/phuc/miccai-brats2018-original-dataset/MICCAI_BraTS_2018_Data_Training/nii_data/train'
+    target_root = '/data1/phuc/miccai-brats2018-original-dataset/MICCAI_BraTS_2018_Data_Training/npz_data2/train'
+    modality = 't1ce'
     main(data_root, modality, target_root)
-
-    data_root = 'Your Nii Test Data Folder'
-    target_root = 'Your Npz Test Data Folder'
-    modality_list = ['flair', 't1', 't1ce']
+    
+    data_root = '/data1/phuc/miccai-brats2018-original-dataset/MICCAI_BraTS_2018_Data_Training/nii_data/test'
+    target_root = '/data1/phuc/miccai-brats2018-original-dataset/MICCAI_BraTS_2018_Data_Training/npz_data2/test'
+    modality_list = ['flair', 't1', 't2']
     for modality in modality_list:
         save_test_npz(data_root, modality, target_root)
