@@ -12,7 +12,10 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 import numpy as np
 import medpy.metric.binary as mmb
-
+import time
+import matplotlib.pyplot as plt
+from PIL import Image
+from utils.palette import color_map
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--data_dir', type=str, default='./data/brats/npz_data')
@@ -20,6 +23,7 @@ parser.add_argument('--n_classes', type=int, default=2)
 parser.add_argument('--test_domain_list', nargs='+', type=str)
 parser.add_argument('--model_dir', type=str,  default='./results/unet_dn/model', help='model_dir')
 parser.add_argument('--batch_size', type=int,  default=32)
+parser.add_argument('--steps', type=int,  default=1)
 parser.add_argument('--save_label', dest='save_label', action='store_true')
 parser.add_argument('--label_dir', type=str,  default='./results/unet_dn', help='model_dir')
 parser.add_argument('--gpu_ids', type=str,  default='0', help='GPU to use')
@@ -42,10 +46,15 @@ def evaluate(description):
 
     logging.info("test-time adaptation: TENT")
     model = setup_tent(base_model)
+
+    ori_model = Unet2D(num_classes=FLAGS.n_classes, num_domains=2, norm='dsbn')
+    ori_model.load_state_dict(torch.load(os.path.join(FLAGS.model_dir, 'final_model.pth')))
+    ori_model = ori_model.cuda()
     
     test_domain_list = FLAGS.test_domain_list
     num_domain = len(test_domain_list)
 
+    logging.info(f"{FLAGS.steps} - {FLAGS.episodic}")
     for test_idx in range(num_domain):
         # reset adaptation for each combination of corruption x severity
         # note: for evaluation protocol, but not necessarily needed
@@ -74,8 +83,13 @@ def evaluate(description):
             vars_list.append(vars)
         model.means_list = means_list
         model.vars_list = vars_list
+        model.means_list0 = means_list
+        model.vars_list0 = vars_list
+        cmap = color_map(n_color=256, normalized=False).reshape(-1)
 
+        total_time = 0
         for idx, (batch, id) in enumerate(tbar):
+            start_time = time.time()
             sample_data = batch['image'].cuda()
             onehot_mask = batch['onehot_label']#.detach().numpy()
             mask = batch['label'].detach().numpy()
@@ -85,9 +99,13 @@ def evaluate(description):
                 output = model(sample_data, domain_id=domain_id)
                 pred_y = output.cpu().detach().numpy()
                 pred_y = np.argmax(pred_y, axis=1)
+            
+            ori_output = ori_model(sample_data, domain_label=0*torch.ones(sample_data.shape[0], dtype=torch.long))
+            ori_pred_y = ori_output.cpu().detach().numpy()
+            ori_pred_y = np.argmax(ori_pred_y, axis=1)
 
             if pred_y.sum() == 0 or mask.sum() == 0:
-                logging.info("==Line 78==")
+                # logging.info("==Line 78==")
                 total_dice += 0
                 total_hd += 100
                 total_asd += 100
@@ -95,8 +113,63 @@ def evaluate(description):
                 total_dice += mmb.dc(pred_y, mask)
                 total_hd += mmb.hd95(pred_y, mask)
                 total_asd += mmb.asd(pred_y, mask)
+            # end_time = time.time()
+            # total_time += end_time - start_time
+            # tbar.set_description(f"{total_time / (idx+1)}")
+            # tbar.update(1)
+            if FLAGS.save_label and idx == 50:
+                if not os.path.exists(os.path.join(FLAGS.label_dir, test_domain_list[test_idx])):
+                    os.mkdir(os.path.join(FLAGS.label_dir, test_domain_list[test_idx]))
+                # for i, pred_mask in enumerate(pred_y):
+                #     pred_mask = Image.fromarray(np.uint8(pred_mask.T))
+                #     pred_mask = pred_mask.convert('P')
+                #     pred_mask.putpalette(cmap)
+                #     pred_mask.save(os.path.join(FLAGS.label_dir, test_domain_list[test_idx], id[i] + '.png'))
+                for i, pred_mask in enumerate(pred_y):
+                    # Convert pred_mask to an image.
+                    pred_mask_img = Image.fromarray(np.uint8(pred_mask))
+                    pred_mask_img = pred_mask_img.convert('P')
+                    pred_mask_img.putpalette(cmap)
+
+                    ori_pred_mask_img = Image.fromarray(np.uint8(ori_pred_y[i]))
+                    ori_pred_mask_img = ori_pred_mask_img.convert('P')
+                    ori_pred_mask_img.putpalette(cmap)
+                    
+                    # Convert mask to an image.
+                    mask_img = Image.fromarray(np.uint8(mask[i]))
+                    mask_img = mask_img.convert('P')
+                    mask_img.putpalette(cmap)
+                    
+                    image_dir = batch['dir'][i]
+                    _, image_name = os.path.split(image_dir)
+                    sample_data_img = np.load(image_dir)['image'].astype(np.float32)
+                    # mask_img = np.load(image_dir)['label'].astype(np.int64)
+                    
+                    # Plot sample_data, pred_mask, and mask side by side.
+                    fig, axes = plt.subplots(1, 4, figsize=(20, 5))
+                    axes[0].imshow(sample_data_img)
+                    axes[0].set_title("Sample Data", fontsize=25)
+                    axes[0].axis('off')
+
+                    axes[1].imshow(ori_pred_mask_img)
+                    axes[1].set_title("W/o TENT", fontsize=25)
+                    axes[1].axis('off')
+                    
+                    axes[2].imshow(pred_mask_img)
+                    axes[2].set_title("W/ TENT", fontsize=25)
+                    axes[2].axis('off')
+                    
+                    axes[3].imshow(mask_img)
+                    axes[3].set_title("Ground Truth", fontsize=25)
+                    axes[3].axis('off')
+                    
+                    # Save or show the figure as needed.
+                    plt.tight_layout()
+                    plt.savefig(os.path.join(FLAGS.label_dir, test_domain_list[test_idx], id[i] + '.png'), dpi=300, bbox_inches='tight')
+                    plt.close(fig)
+                exit()
         
-        logging.info(f"[{test_domain_list[test_idx]}] Dice: {100*total_dice/len(tbar):.4}, HD: {total_hd/len(tbar):.4}, AHD: {total_asd/len(tbar):.4}")
+        # logging.info(f"[{test_domain_list[test_idx]}] Dice: {100*total_dice/len(tbar):.4}, HD: {total_hd/len(tbar):.4}, AHD: {total_asd/len(tbar):.4}")
 
 
 def get_bn_statis(model, domain_id):
@@ -121,11 +194,11 @@ def setup_tent(model):
     params, param_names = tent.collect_params(model)
     optimizer = setup_optimizer(params)
     tent_model = tent.Tent(model, optimizer,
-                           steps=1,
+                           steps=FLAGS.steps,
                            episodic=FLAGS.episodic)
-    logging.info(f"model for adaptation: %s", model)
-    logging.info(f"params for adaptation: %s", param_names)
-    logging.info(f"optimizer for adaptation: %s", optimizer)
+    # logging.info(f"model for adaptation: %s", model)
+    # logging.info(f"params for adaptation: %s", param_names)
+    # logging.info(f"optimizer for adaptation: %s", optimizer)
     return tent_model
 
 

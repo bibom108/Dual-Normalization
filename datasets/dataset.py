@@ -37,7 +37,7 @@ class Dataset(Dataset):
             sample = {'image': image, 'label': label}
             if self.transforms:
                 sample = self.transforms(sample)
-
+            sample['dir'] = image_dir
             return sample, image_name.replace('.npz', '')
         else:
             sample = {'image': image, 'label': label}
