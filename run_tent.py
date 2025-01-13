@@ -169,7 +169,7 @@ def evaluate(description):
                     plt.close(fig)
                 exit()
         
-        # logging.info(f"[{test_domain_list[test_idx]}] Dice: {100*total_dice/len(tbar):.4}, HD: {total_hd/len(tbar):.4}, AHD: {total_asd/len(tbar):.4}")
+        logging.info(f"[{test_domain_list[test_idx]}] Dice: {100*total_dice/len(tbar):.4}, HD: {total_hd/len(tbar):.4}, AHD: {total_asd/len(tbar):.4}")
 
 
 def get_bn_statis(model, domain_id):

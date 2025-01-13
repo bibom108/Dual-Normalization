@@ -24,6 +24,9 @@ class Tent(nn.Module):
         self.means_list = []
         self.vars_list = []
 
+        self.means_list0 = []
+        self.vars_list0 = []
+
         # note: if the model is never reset, like for continual adaptation,
         # then skipping the state copy would save memory
         self.model_state, self.optimizer_state = \
@@ -31,20 +34,20 @@ class Tent(nn.Module):
 
     def forward(self, x, domain_id=None):
         if self.episodic:
-            self.reset()
+            self.reset(domain_id)
 
         for _ in range(self.steps):
             outputs = self.forward_and_adapt(x, self.model, self.optimizer, domain_id)
 
         return outputs
 
-    def reset(self):
+    def reset(self, domain_id):
         if self.model_state is None or self.optimizer_state is None:
             raise Exception("cannot reset without saved model/optimizer state")
         load_model_and_optimizer(self.model, self.optimizer,
                                  self.model_state, self.optimizer_state)
-        self.means_list = []
-        self.vars_list = []
+        self.means_list = self.means_list0
+        self.vars_list = self.vars_list0
 
     @torch.enable_grad()  # ensure grads in possible no grad context for testing
     def forward_and_adapt(self, x, model, optimizer, domain_id):
@@ -61,6 +64,18 @@ class Tent(nn.Module):
             self.dis = new_dis
         else:
             return self.best_out
+        # # NEW
+        # outputs_1, outputs_2 = self.run_dual_bn_versions(x)
+
+        # entropy_1 = calc_entropy(outputs_1).mean()
+        # entropy_2 = calc_entropy(outputs_2).mean()
+        # if entropy_1 > entropy_2:
+        #     weight_1 = 1 - self.entropy_threshold  # Weigh version 1 more heavily if it's less uncertain
+        # else:
+        #     weight_1 = self.entropy_threshold  # Weigh version 2 more heavily if it's less uncertain
+        # # print(weight_1)
+        # fused_output = weight_1 * outputs_1 + (1 - weight_1) * outputs_2
+        
         # adapt
         loss = calc_entropy(outputs).mean()
         # print(loss)

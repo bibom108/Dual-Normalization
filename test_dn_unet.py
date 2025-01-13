@@ -15,6 +15,7 @@ from torch.nn import DataParallel
 from torch.nn import PairwiseDistance
 from torch.utils.data import DataLoader
 import logging
+import matplotlib.pyplot as plt
 
 
 parser = argparse.ArgumentParser()
@@ -121,18 +122,52 @@ if __name__ == '__main__':
                     total_hd += mmb.hd95(pred_y, mask)
                     total_asd += mmb.asd(pred_y, mask)
                 
-                logging.info('Domain: {}, Dice: {}, HD: {}, ASD: {}'.format(
-                    test_domain_list[test_idx],
-                    round(100 * total_dice / (idx + 1), 2),
-                    round(total_hd / (idx + 1), 2),
-                    round(total_asd / (idx + 1), 2)
-                ))
-
-                if FLAGS.save_label:
+                if FLAGS.save_label and idx == 20:
                     if not os.path.exists(os.path.join(FLAGS.label_dir, test_domain_list[test_idx])):
                         os.mkdir(os.path.join(FLAGS.label_dir, test_domain_list[test_idx]))
+                    # for i, pred_mask in enumerate(pred_y):
+                    #     pred_mask = Image.fromarray(np.uint8(pred_mask.T))
+                    #     pred_mask = pred_mask.convert('P')
+                    #     pred_mask.putpalette(cmap)
+                    #     pred_mask.save(os.path.join(FLAGS.label_dir, test_domain_list[test_idx], id[i] + '.png'))
                     for i, pred_mask in enumerate(pred_y):
-                        pred_mask = Image.fromarray(np.uint8(pred_mask.T))
-                        pred_mask = pred_mask.convert('P')
-                        pred_mask.putpalette(cmap)
-                        pred_mask.save(os.path.join(FLAGS.label_dir, test_domain_list[test_idx], id[i] + '.png'))
+                        # Convert pred_mask to an image.
+                        pred_mask_img = Image.fromarray(np.uint8(pred_mask))
+                        pred_mask_img = pred_mask_img.convert('P')
+                        pred_mask_img.putpalette(cmap)
+                        
+                        # Convert mask to an image.
+                        mask_img = Image.fromarray(np.uint8(mask[i]))
+                        mask_img = mask_img.convert('P')
+                        mask_img.putpalette(cmap)
+                        
+                        image_dir = batch['dir'][i]
+                        _, image_name = os.path.split(image_dir)
+                        sample_data_img = np.load(image_dir)['image'].astype(np.float32)
+                        # mask_img = np.load(image_dir)['label'].astype(np.int64)
+                        
+                        # Plot sample_data, pred_mask, and mask side by side.
+                        fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+                        axes[0].imshow(sample_data_img)
+                        axes[0].set_title("Sample Data")
+                        axes[0].axis('off')
+                        
+                        axes[1].imshow(pred_mask_img)
+                        axes[1].set_title("Prediction")
+                        axes[1].axis('off')
+                        
+                        axes[2].imshow(mask_img)
+                        axes[2].set_title("Ground Truth")
+                        axes[2].axis('off')
+                        
+                        # Save or show the figure as needed.
+                        plt.tight_layout()
+                        plt.savefig(os.path.join(FLAGS.label_dir, test_domain_list[test_idx], id[i] + '_baseline.png'), dpi=300, bbox_inches='tight')
+                        plt.close(fig)
+                    exit()
+        # logging.info('Domain: {}, Dice: {}, HD: {}, ASD: {}'.format(
+        #     test_domain_list[test_idx],
+        #     round(100 * total_dice / (idx + 1), 2),
+        #     round(total_hd / (idx + 1), 2),
+        #     round(total_asd / (idx + 1), 2)
+        # ))
